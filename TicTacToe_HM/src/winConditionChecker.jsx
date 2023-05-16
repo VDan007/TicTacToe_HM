@@ -47,7 +47,7 @@ let squares = [
   //  horizontalChecker();
 
     function verticalChecker(){
-      for(let i = lastSelectedSquare[0]; i < tSelectedSqulasare[0] + squaresToWin; i++){
+      for(let i = lastSelectedSquare[0]; i < SelectedSqulasare[0] + squaresToWin; i++){
         console.log("ran down" + " " + i);
         if(squares[i] && squares[i][lastSelectedSquare[1]] && squares[i][lastSelectedSquare[1]] === symbol){
           symbolCounter++;
@@ -76,11 +76,7 @@ let squares = [
                                                             ///   x
                                                             /// x
 
-      console.log('works');
-      
-
        for(let i = lastSelectedSquare[0]; i < lastSelectedSquare[0] + squaresToWin; i++){
-        
         if(squares[i] && squares[i][lastSelectedSquare[1] + lastSelectedSquare[0] -i ] && squares[i][lastSelectedSquare[1] + lastSelectedSquare[0] -i ]===symbol){
           symbolCounter++;
         }else{
@@ -88,7 +84,21 @@ let squares = [
           break;
         }
        }
-       console.log(symbolCounter);
+       
+       
+
+       for(let i = lastSelectedSquare[0] -1; i > lastSelectedSquare[0] - squaresToWin; i--){
+        if(squares[i] && squares[i][lastSelectedSquare[1] + Math.abs(lastSelectedSquare[0] -i) ] && squares[i][lastSelectedSquare[1] + Math.abs(lastSelectedSquare[0] -i) ] ===symbol){
+          symbolCounter++;
+        }else{
+          console.log('not included');
+          break;
+        }
+       }
+        console.log( symbolCounter);
+       
+
+
 
 
     }
