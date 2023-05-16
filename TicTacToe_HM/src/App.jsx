@@ -4,7 +4,7 @@
 function App() {
 
   let squares = [
-    ["x","x","x","x"],
+    ["x","p","p",],
     [0,1,2],
     [0,1,2],
     
@@ -16,7 +16,7 @@ function App() {
 
   console.log(squares);
 
-  let lastCS = [0,2];
+  let lastCS = [0,0];
 
 
   function winConditonChecker(lastSelectedSquare,squaresToWin,symbol){
@@ -31,14 +31,16 @@ function App() {
           symbolCounter++;
         }else{
           console.log("not included");
+          break;
         }
       }
-      for(let i = lastSelectedSquare[ 1 - 1 ]; i > lastSelectedSquare[1] - squaresToWin; i--){
-        console.log("ran left" + " " + i);
-        if(squares[lastSelectedSquare[0]][i] && squares[lastSelectedSquare[0]][i] === symbol){
+      for(let y = lastSelectedSquare[1] -1; y > lastSelectedSquare[1] - squaresToWin; y--){
+        console.log("ran left" + " " + y);
+        if(squares[lastSelectedSquare[0]][y] && squares[lastSelectedSquare[0]][y] === symbol){
           symbolCounter++;
         }else{
           console.log("not included");
+          break;
         }
       }
       console.log(symbolCounter);
