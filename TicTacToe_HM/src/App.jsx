@@ -18,7 +18,7 @@ function App() {
 
 
 
-  let lastCS = [4,0];
+  let lastCS = [2,0];
 
 
   winConditonChecker(lastCS,3,"x");

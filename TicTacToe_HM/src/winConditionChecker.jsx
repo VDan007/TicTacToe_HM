@@ -58,15 +58,15 @@ let squares = [
           break;
         }
       }
-      // for(let y = lastSelectedSquare[1] -1; y > lastSelectedSquare[1] - squaresToWin; y--){
-      //   console.log("ran left" + " " + y);
-      //   if(squares[lastSelectedSquare[0]][y] && squares[lastSelectedSquare[0]][y] === symbol){
-      //     symbolCounter++;
-      //   }else{
-      //     console.log("not included");
-      //     break;
-      //   }
-      // }
+      for(let y = lastSelectedSquare[0] -1; y > lastSelectedSquare[0] - squaresToWin; y--){
+        console.log("ran up" + " " + y);
+        if(squares[y] && squares[y][lastSelectedSquare[1]] && squares[y][lastSelectedSquare[1]] === symbol){
+          symbolCounter++;
+        }else{
+          console.log("not included");
+          break;
+        }
+      }
       console.log("symbolCounter after vertical check " + symbolCounter);
     }
     verticalChecker();
