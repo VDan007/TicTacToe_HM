@@ -2,8 +2,8 @@
 
 
 let squares = [
-    ["x","x","p",],
-    ["x",1,2],
+    [0,0,"x"],
+    [0,"x",2],
     ["x",1,2],
     
   ];
@@ -47,8 +47,7 @@ let squares = [
   //  horizontalChecker();
 
     function verticalChecker(){
-      console.log(symbol);
-      for(let i = lastSelectedSquare[0]; i < lastSelectedSquare[0] + squaresToWin; i++){
+      for(let i = lastSelectedSquare[0]; i < tSelectedSqulasare[0] + squaresToWin; i++){
         console.log("ran down" + " " + i);
         if(squares[i] && squares[i][lastSelectedSquare[1]] && squares[i][lastSelectedSquare[1]] === symbol){
           symbolCounter++;
@@ -69,9 +68,32 @@ let squares = [
       }
       console.log("symbolCounter after vertical check " + symbolCounter);
     }
-    verticalChecker();
+    //verticalChecker();
 
    //console.log(squares[1][0]);
+
+   function diagonal_fromLeftDownToRightUp_Checker(){       ///     x
+                                                            ///   x
+                                                            /// x
+
+      console.log('works');
+      
+
+       for(let i = lastSelectedSquare[0]; i < lastSelectedSquare[0] + squaresToWin; i++){
+        
+        if(squares[i] && squares[i][lastSelectedSquare[1] + lastSelectedSquare[0] -i ] && squares[i][lastSelectedSquare[1] + lastSelectedSquare[0] -i ]===symbol){
+          symbolCounter++;
+        }else{
+          console.log("not included");
+          break;
+        }
+       }
+       console.log(symbolCounter);
+
+
+    }
+
+    diagonal_fromLeftDownToRightUp_Checker();
 
   }
 
