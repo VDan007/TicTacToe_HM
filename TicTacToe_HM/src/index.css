@@ -1,4 +1,42 @@
-.svg1 path {
-    fill: greenyellow;
-    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+.app{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: green;
+}
+
+
+
+
+/* //////////////overlay///////////////// */
+
+.login{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: white;
+}
+.login__playerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-height: 70vh;
+    background-color: red;
+}
+.login__playerCard{
+    display: inline-block;
+    min-width: 50vw;
+    text-align: center;
+}
+
+
+
+
+
+
+/* //////////////overlay///////////////// */

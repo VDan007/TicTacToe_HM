@@ -1,8 +1,8 @@
-import { winConditonChecker } from "./winConditionChecker";
-import { Overlay } from "./Overlay";
-import { GameTable } from "./GameTable";
+import { winConditonChecker } from "./HelperFunctions/winConditionChecker";
+import { Login } from "./Components/Login";
+import { GameTable } from "./Components/GameTable";
 import { useState } from "react";
-import { AlienSVG } from "./AlienSVG";
+
 
 function App() {
 
@@ -13,26 +13,22 @@ function App() {
   // state game won ?
  
 
-  const[ showOverlay, setShowOverlay ] = useState(true);
+  const[ showLogin, setShowLogin ] = useState(true);
+  const[ showGameTable, setShowGAmeTable ] = useState(false);
 
 
 
 
-  let lastCS = [2,2];
-
-
-  winConditonChecker(lastCS,3,"x");
+  
 
   return (
-    <div>
-      {showOverlay && <Overlay/>}
-      <GameTable/>
-      <AlienSVG
-        fill="blue"
-      />
+    <div className="app">
+      {showLogin && <Login/>}
+      {showGameTable&&<GameTable/>}
+      
     </div>
   );
-}
+} 
 
 export default App;
  

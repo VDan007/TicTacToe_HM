@@ -102,18 +102,18 @@ let squares = [
     function diagonal_fromRightDownToLeftUp_Checker(){      /// x     
                                                             ///   x
                                                             ///     x
-      // for(let i = lastSelectedSquare[0]; i < lastSelectedSquare[0] + squaresToWin; i++){
+      for(let i = lastSelectedSquare[0]; i < lastSelectedSquare[0] + squaresToWin; i++){
 
-      //   if(squares[i] && squares[i][lastSelectedSquare[1] + Math.abs(lastSelectedSquare[0] -i) ] && squares[i][lastSelectedSquare[1] + Math.abs(lastSelectedSquare[0] -i )]===symbol){
+        if(squares[i] && squares[i][lastSelectedSquare[1] + Math.abs(lastSelectedSquare[0] -i) ] && squares[i][lastSelectedSquare[1] + Math.abs(lastSelectedSquare[0] -i )]===symbol){
 
-      //     symbolCounter++;
-      //   }else{
-      //     console.log("not included");
-      //     break;
-      //   }
-      //  }
+          symbolCounter++;
+        }else{
+          console.log("not included");
+          break;
+        }
+       }
 
-      //  console.log(symbolCounter + " lef-to right");
+       console.log(symbolCounter + " lef-to right");
        
 
        for(let i = lastSelectedSquare[0] -1 ; i > lastSelectedSquare[0] - squaresToWin; i--){
