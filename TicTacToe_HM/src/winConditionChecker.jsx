@@ -2,9 +2,9 @@
 
 
 let squares = [
-    [0,0,"x"],
+    ["x",0,0],
     [0,"x",2],
-    ["x",1,2],
+    [0,1,"x"],
     
   ];
 
@@ -97,13 +97,43 @@ let squares = [
        }
         console.log( symbolCounter);
        
+    }
 
+    function diagonal_fromRightDownToLeftUp_Checker(){      /// x     
+                                                            ///   x
+                                                            ///     x
+      // for(let i = lastSelectedSquare[0]; i < lastSelectedSquare[0] + squaresToWin; i++){
+
+      //   if(squares[i] && squares[i][lastSelectedSquare[1] + Math.abs(lastSelectedSquare[0] -i) ] && squares[i][lastSelectedSquare[1] + Math.abs(lastSelectedSquare[0] -i )]===symbol){
+
+      //     symbolCounter++;
+      //   }else{
+      //     console.log("not included");
+      //     break;
+      //   }
+      //  }
+
+      //  console.log(symbolCounter + " lef-to right");
+       
+
+       for(let i = lastSelectedSquare[0] -1 ; i > lastSelectedSquare[0] - squaresToWin; i--){
+        
+
+        if(squares[i] && squares[i][lastSelectedSquare[1] + i - lastSelectedSquare[0] ] && squares[i][lastSelectedSquare[1] + i - lastSelectedSquare[0]  ] ===symbol){
+          symbolCounter++;
+        }else{
+          console.log('not included');
+          break;
+        }
+       }
+       console.log(symbolCounter + " right to left");
+       console.log(symbolCounter);
 
 
 
     }
 
-    diagonal_fromLeftDownToRightUp_Checker();
+    diagonal_fromRightDownToLeftUp_Checker();
 
   }
 
