@@ -32,6 +32,10 @@
     display: inline-block;
     min-width: 50vw;
     text-align: center;
+    cursor: pointer;
+}
+.clicked{
+    background-color: green;
 }
 
 

@@ -1,26 +1,37 @@
-
+import { useEffect } from "react";
+import { PlayerCard } from "./PlayerCard";
 
 function Login(){
+
+
+    
+
+
     return(
         <div className="login">
             <div className="login__playerContainer">
                 <div>
-                    <div className="login__playerCard">
-                        <img src="/user.svg" alt="" />
-                        <p>player 1</p>
-                    </div>
-                    <div className="login__playerCard">
-                        <img src="/user.svg" alt="" />
-                        <p>player 2</p>
-                    </div>
-                    <div className="login__playerCard">
-                        <img src="/user.svg" alt="" />
-                        <p>player 3</p>
-                    </div>
-                    <div className="login__playerCard">
-                        <img src="/user.svg" alt="" />
-                        <p>player 4</p>
-                    </div>
+                    <PlayerCard
+                        key = "p01"
+                        name = "player1"
+                        clicked = {true}
+                    />
+                    <PlayerCard
+                        key = "p02"
+                        name = "player2"
+                        clicked = {false}
+                    />
+                    <PlayerCard
+                        key = "p03"
+                        name = "player3"
+                        clicked = {false}
+                    />
+                    <PlayerCard
+                        key = "p04"
+                        name = "player4"
+                        clicked = {false}
+                    />
+                    
                 </div>
             </div>
             <div>
