@@ -10,11 +10,11 @@ function Login(){
     return(
         <div className="login">
             <div className="login__playerContainer">
-                <div>
+               
                     <PlayerCard
                         key = "p01"
                         name = "player1"
-                        clicked = {true}
+                        clicked = {false}
                     />
                     <PlayerCard
                         key = "p02"
@@ -32,7 +32,7 @@ function Login(){
                         clicked = {false}
                     />
                     
-                </div>
+                
             </div>
             <div>
                 <h1>table size setup</h1>

@@ -21,21 +21,25 @@
     background-color: white;
 }
 .login__playerContainer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;    
+    width:100%;
     max-height: 70vh;
     background-color: red;
+    overflow: hidden;
 }
 .login__playerCard{
-    display: inline-block;
-    min-width: 50vw;
+    
     text-align: center;
     cursor: pointer;
 }
 .clicked{
     background-color: green;
+    
+}
+.playerDefaultImg{
+    max-height: 65%;
 }
 
 

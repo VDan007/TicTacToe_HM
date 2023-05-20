@@ -7,14 +7,16 @@ function PlayerCard(props){
     const [ name, setName ] = useState(props.name);
     const [ clicked, setClicked ] = useState(props.clicked);
 
-
+    function test(){
+        setClicked(prev=>!prev);
+    }
 
 
     return(
 
         clicked ? 
         
-        <div className="login__playerCard clicked">
+        <div className="login__playerCard clicked" onClick={test}>
             <input type="text" />
             <input type="color" />
             <input type="image" />
@@ -22,8 +24,8 @@ function PlayerCard(props){
         </div>
 
         :
-        <div className="login__playerCard">
-                        <img src="/user.svg" alt="" />
+        <div className="login__playerCard" onClick={test}>
+                        <img className="playerDefaultImg" src="/user.svg" alt="" />
                         <p>{name}</p>
         </div>
     );
