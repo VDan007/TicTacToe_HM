@@ -17,7 +17,9 @@ function PlayerCard(props){
         clicked ? 
         
         <div className="login__playerCard clicked" onClick={test}>
-            <input type="text" />
+            <input type="text"
+             placeholder="enter player name"
+            />
             <input type="color" />
             <input type="image" />
 
