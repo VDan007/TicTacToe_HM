@@ -2,6 +2,7 @@ import { winConditonChecker } from "./HelperFunctions/winConditionChecker";
 import { Login } from "./Components/Login";
 import { GameTable } from "./Components/GameTable";
 import { useState } from "react";
+import { AlienIcon } from "./Components/AlienComponent";
 
 
 function App() {

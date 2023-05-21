@@ -16,12 +16,21 @@ function PlayerCard(props){
 
         clicked ? 
         
-        <div className="login__playerCard clicked" onClick={test}>
-            <input type="text"
-             placeholder="enter player name"
+        <div className="login__playerCard clicked" >
+            <input 
+                type="text"
+                placeholder="enter player name"
             />
             <input type="color" />
-            <input type="image" />
+            <label htmlFor="ai">AI player
+                <input type="checkbox" id="ai" />
+            </label>
+
+            <button>OK</button>
+
+            <button onClick={test}
+                >cancel
+            </button>
 
         </div>
 
