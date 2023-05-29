@@ -11,7 +11,6 @@ let squares = [
 
  // let selectedSquares = [squares[0][0],squares[0][1],squares[0][2]];
 
-  //console.log(squares);
 
 
 
