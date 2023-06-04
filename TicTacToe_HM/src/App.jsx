@@ -15,7 +15,7 @@ function App() {
  
 
   const[ showLogin, setShowLogin ] = useState(true);
-  const[ showGameTable, setShowGAmeTable ] = useState(false);
+  const[ showGameTable, setShowGAmeTable ] = useState(true);
 
 
 
@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="app">
-      {showLogin && <Login/>}
+      {/* {showLogin && <Login/>} */}
       {showGameTable&&<GameTable/>}
       
     </div>

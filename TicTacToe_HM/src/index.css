@@ -10,6 +10,21 @@
     
 }
 
+/* /////////////GameTable//////////////////// */
+.GameTable_container{
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    min-height: 80vh;
+    background-color: red;
+    gap: 1px;
+}
+.GameTable_field{
+    background-color: white;
+}
+
+/* /////////////GameTable//////////////////// */
 
 
 
